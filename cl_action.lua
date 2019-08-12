@@ -823,7 +823,6 @@ RegisterNUICallback( "ButtonClick", function( data, cb )
 	elseif ( data == "testbutonu1" ) then
 	
 	
-	TriggerEvent('JSC:StartMinigame', SafeRewards)
 	
 	
 	elseif ( data == "exit" ) then 
