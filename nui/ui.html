@@ -1,0 +1,226 @@
+<!-- 
+
+	ActionMenu - v1.0.1
+	Created by WolfKnight
+	Additional help from lowheartrate, TheStonedTurtle, and Briglair. 
+
+ -->
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="ui.js" type="text/javascript"></script>
+        <link href="ui.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div id="actionmenu" style="display: none;">
+        	<!-- 
+        		This mainmenu div should be left as it is, you should change the buttons though.
+
+        		If you want to make a submenu, then you must create a new div, with the ID of the 
+        		div being the data-sub attribute of the button that will open it. For example, the 
+        		below button Example Submenu, has the data-sub attribute of "examplesubmenu", which
+        		is the same id as the div below. All submenus must also have a data-parent attribute. 
+        	 -->
+        	<div id="mainmenu">
+	            <button class="menuoption" data-sub="examplesubmenu">Kİmlİk İşlemlerİ</button>
+				<button class="menuoption" data-sub="examplesubmenu2">Araç İşlemlerİ</button>
+				<button class="menuoption" data-sub="examplesubmenu3">Hareketler</button>
+				<button class="menuoption" data-sub="examplesubmenu4">Yürüyüşler</button>
+				<button class="menuoption" data-action="yuruyus10">Yaralı</button>
+				<button class="menuoption" data-action="testbutonu1">Test Butonu</button>
+				
+	          
+			</div>
+			
+
+
+    			<div id="examplesubmenu" data-parent="mainmenu" style="display: none;">
+    				<button class="menuoption" data-action="button1">Kimlik Gör</button>
+					<button class="menuoption" data-action="button2">Kimlik Ver</button> 
+					<button class="menuoption" data-action="button3">Ehliyet Gör</button> 
+					<button class="menuoption" data-action="button4">Ehliyet Ver</button>
+					<button class="menuoption" data-action="button5">Silah Ruhsatı Gör</button> 
+					<button class="menuoption" data-action="button6">Silah Ruhsati Ver</button>
+    			</div>
+				
+				<div id="examplesubmenu4" data-parent="mainmenu" style="display: none;">
+					<button class="menuoption" data-action="yuruyus15">Normal</button>
+					<button class="menuoption" data-action="yuruyus3">Depresif erkek</button>
+					<button class="menuoption" data-action="yuruyus4">Depresif kadın</button>
+					<button class="menuoption" data-action="yuruyus5">İş</button>
+					<button class="menuoption" data-action="yuruyus6">Kararlı</button>
+					<button class="menuoption" data-action="yuruyus7">Sıradan</button>
+					<button class="menuoption" data-action="yuruyus8">Obez</button>
+					<button class="menuoption" data-action="yuruyus9">Hipster</button>
+					<button class="menuoption" data-action="yuruyus11">Korkak</button>
+					<button class="menuoption" data-action="yuruyus12">Berduş</button>
+					<button class="menuoption" data-action="yuruyus13">Üzgün</button>
+					<button class="menuoption" data-action="yuruyus14">Kaslı</button>
+					<button class="menuoption" data-action="yuruyus16">Gangsta</button>
+					<button class="menuoption" data-action="yuruyus17">Sarhoş</button>
+					<button class="menuoption" data-action="yuruyus18">Korkak</button>
+					<button class="menuoption" data-action="yuruyus1">Standart erkek</button>
+					<button class="menuoption" data-action="yuruyus2">Standart kadın</button>
+					<button class="menuoption" data-action="yuruyus19">Gururlu</button>
+					<button class="menuoption" data-action="yuruyus20">Hafif tempolu koşu</button>
+					<button class="menuoption" data-action="yuruyus21">Kıvırt</button>
+					<button class="menuoption" data-action="yuruyus22">Huysuz</button>
+					<button class="menuoption" data-action="yuruyus23">Kibirli</button>
+					
+					
+    			</div>
+
+
+                <div id="examplesubmenu2" data-parent="mainmenu" style="display: none;">
+				        <button class="menuoption" data-action="arababuton1">Motoru Aç/Kapa</button>
+                        <button class="menuoption" data-action="arababuton2">Camı Aç/Kapa</button>
+						<button class="menuoption" data-action="arababuton3">Bagajı Aç/Kapa</button>
+						<button class="menuoption" data-action="arababuton4">Kaputu Aç/Kapa</button>
+						<button class="menuoption" data-action="arababuton5">Neon Aç/Kapa</button>
+
+                </div>
+				
+				<div id="examplesubmenu3" data-parent="mainmenu" style="display: none;">
+				<button class="menuoption" data-sub="ismenusu">İş</button>
+				<button class="menuoption" data-sub="spormenusu">Spor</button>
+				<button class="menuoption" data-sub="eglencemenusu">Eğlence</button>
+				<button class="menuoption" data-sub="davranismenusu">Davranış</button>
+				<button class="menuoption" data-sub="genelmenusu">Genel</button>
+				<button class="menuoption" data-sub="dansmenusu">Dans</button>
+				<button class="menuoption" data-sub="digerlerimenusu">Diğerleri</button>
+                        
+                </div>
+				
+				<div id="ismenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="is1">Suçlu: Eğil ve teslim ol</button>
+                        <button class="menuoption" data-action="is2">Balık tut</button>
+						<button class="menuoption" data-action="is3">Polis: Eller belde</button>
+                        <button class="menuoption" data-action="is4">Polis: Araştırma</button>
+						<button class="menuoption" data-action="is5">Polis: Telsizle konuşma</button>
+                        <button class="menuoption" data-action="is6">Polis: Trafik polisi</button>
+						<button class="menuoption" data-action="is7">Polis: Dürbün</button>
+                        <button class="menuoption" data-action="is8">Tarım: Hasat</button>
+						<button class="menuoption" data-action="is9">Mekanik: Motor kontrolü</button>
+                        <button class="menuoption" data-action="is10">Doktor: Gözlemleme</button>
+						<button class="menuoption" data-action="is11">Taxi: Müşterilerle konuş</button>
+                        <button class="menuoption" data-action="is12">Camdan ehliyeti uzat</button>
+						<button class="menuoption" data-action="is13">Bagaj Yükleme</button>
+                        <button class="menuoption" data-action="is14">Barmen: İçki koy</button>
+						<button class="menuoption" data-action="is15">Fotoğraf çek</button>
+                        <button class="menuoption" data-action="is16">Not al</button>
+						<button class="menuoption" data-action="is17">Duvara çivi çak</button>
+                        <button class="menuoption" data-action="is18">Dilen</button>
+						<button class="menuoption" data-action="is19">Dab</button>
+						
+                </div>
+				
+				<div id="spormenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="spor1">Kaslarını göster</button>
+                        <button class="menuoption" data-action="spor2">Ağırlık kaldır</button>
+						<button class="menuoption" data-action="spor3">Şınav çek</button>
+                        <button class="menuoption" data-action="spor4">Mekik çek</button>
+						<button class="menuoption" data-action="spor5">Yoga yap</button>
+                </div>
+				
+				<div id="eglencemenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="eglence1">Müzik enstrümanı çal</button>
+                        <button class="menuoption" data-action="eglence2">DJ</button>
+						<button class="menuoption" data-action="eglence3">Bira iç</button>
+						<button class="menuoption" data-action="eglence4">Bira iç 2</button>
+						<button class="menuoption" data-action="eglence5">Gitar çalma taklidi</button>
+						<button class="menuoption" data-action="eglence6">Sana girsin</button>
+						<button class="menuoption" data-action="eglence7">Rock'n Roll</button>
+						<button class="menuoption" data-action="eglence8">Sarhoş</button>
+						<button class="menuoption" data-action="eglence9">Araç içinde kusma</button>
+                </div>
+				
+				<div id="davranismenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="davranis1">Alkış</button>
+						<button class="menuoption" data-action="davranis2">Süper</button>
+						<button class="menuoption" data-action="davranis3">Sen</button>
+						<button class="menuoption" data-action="davranis4">Elleri yana aç</button>
+						<button class="menuoption" data-action="davranis5">Oo kardeşim</button>
+						<button class="menuoption" data-action="davranis6">Ben</button>
+						<button class="menuoption" data-action="davranis7">Biliyordum</button>
+						<button class="menuoption" data-action="davranis8">Olamaz</button>
+						<button class="menuoption" data-action="davranis9">Sakin ol</button>
+						<button class="menuoption" data-action="davranis10">Kork</button>
+						<button class="menuoption" data-action="davranis11">Kork 2</button>
+						<button class="menuoption" data-action="davranis12">Esneme</button>
+						<button class="menuoption" data-action="davranis13">Kahretsin</button>
+						<button class="menuoption" data-action="davranis14">Sarıl</button>
+						<button class="menuoption" data-action="davranis15">Orta parmak</button>
+						<button class="menuoption" data-action="davranis16">Kafana sık</button>
+                        
+                </div>
+				
+				<div id="genelmenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="genel1">Kahve iç</button>
+						<button class="menuoption" data-action="genel2">Oturarak telefonla oyna</button>
+						<button class="menuoption" data-action="genel3">Yaslan</button>
+						<button class="menuoption" data-action="genel4">Yere otur</button>
+						<button class="menuoption" data-action="genel5">Sırtüstü uzan</button>
+						<button class="menuoption" data-action="genel6">Yüzüstü uzan</button>
+						<button class="menuoption" data-action="genel7">Uyu</button>
+						<button class="menuoption" data-action="genel8">Temizle</button>
+						<button class="menuoption" data-action="genel9">Mangal yak</button>
+						<button class="menuoption" data-action="genel10">Titanik</button>
+						<button class="menuoption" data-action="genel11">Selfie çek</button>
+						<button class="menuoption" data-action="genel12">Kapı dinle</button>
+                        
+                </div>
+				
+				
+				
+				<div id="dansmenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="danslar1">Dans 1</button>
+						<button class="menuoption" data-action="danslar2">Dans 2</button>
+						<button class="menuoption" data-action="danslar3">Dans 3</button>
+						<button class="menuoption" data-action="danslar4">Dans 4</button>
+						<button class="menuoption" data-action="danslar5">Dans 5</button>
+						<button class="menuoption" data-action="danslar6">Dans 6</button>
+						<button class="menuoption" data-action="danslar7">Dans 7</button>
+						<button class="menuoption" data-action="danslar8">Dans 8</button>
+						<button class="menuoption" data-action="danslar9">Dans 9</button>
+						<button class="menuoption" data-action="danslar10">Dans 10</button>
+						<button class="menuoption" data-action="danslar11">Dans 11</button>
+						<button class="menuoption" data-action="danslar12">Dans 12</button>
+						<button class="menuoption" data-action="danslar13">Dans 13</button>
+						<button class="menuoption" data-action="danslar14">Dans 14</button>
+						<button class="menuoption" data-action="danslar15">Dans 15</button>
+						<button class="menuoption" data-action="danslar16">Dans 16</button>
+						<button class="menuoption" data-action="danslar17">Dans 17</button>
+						<button class="menuoption" data-action="danslar18">Dans 18</button>
+						<button class="menuoption" data-action="danslar19">Dans 19</button>
+						<button class="menuoption" data-action="danslar20">Dans 20</button>
+						
+                        
+                </div>
+				
+				<div id="digerlerimenusu" data-parent="examplesubmenu3" style="display: none;">
+                        <button class="menuoption" data-action="digerleri1">Selam ver</button>
+						<button class="menuoption" data-action="digerleri2">El sıkış</button>
+						<button class="menuoption" data-action="digerleri3">Dostça selamlaş</button>
+						<button class="menuoption" data-action="digerleri4">Gangster selamı ver</button>
+						<button class="menuoption" data-action="digerleri5">Asker selamı ver</button>
+						<button class="menuoption" data-action="digerleri6">Arabada erkek s**so</button>
+						<button class="menuoption" data-action="digerleri7">Arabada kadın s**so</button>
+						<button class="menuoption" data-action="digerleri8">Arabada erkek</button>
+						<button class="menuoption" data-action="digerleri9">Arabada kadın</button>
+						<button class="menuoption" data-action="digerleri10">Kaşı</button>
+						<button class="menuoption" data-action="digerleri11">Masturbasyon</button>
+						<button class="menuoption" data-action="digerleri12">Çekicilik yap</button>
+						<button class="menuoption" data-action="digerleri13">Müşteri bekleme</button>
+						<button class="menuoption" data-action="digerleri14">Göğüsleri göster</button>
+						<button class="menuoption" data-action="digerleri15">Striptiz 1</button>
+						<button class="menuoption" data-action="digerleri16">Striptiz 2</button>
+						<button class="menuoption" data-action="digerleri17">Striptiz 3</button>
+                        
+                </div>
+				
+				
+        </div>
+    </body>
+</html>

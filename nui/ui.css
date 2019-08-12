@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------------------
+
+    ActionMenu - v1.0.1
+    Created by WolfKnight
+    Additional help from lowheartrate, TheStonedTurtle, and Briglair.  
+
+--------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url( "Roboto.ttf" );
+}
+
+#actionmenu {
+    position: absolute;
+    overflow: hidden; 
+    left: 44%; 
+    top: 33%;
+    width: 45%;
+    height: 50%; 
+}
+
+#actionmenu div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 100%;
+}
+
+#actionmenu button, button:hover, button:active, button:focus {
+    border-radius: 1px;
+  	border: 1px solid #334361;
+}
+
+#actionmenu button { 
+    background: linear-gradient( to bottom, rgba(51, 67, 97, 0.8), rgba(51, 67, 97, 0.8) );
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 9px 24px; 
+    margin: 1px 1px 1px 1px;
+    cursor: pointer; 
+    width: 200px; 
+    display: block; 
+    text-transform: uppercase;
+}
+
+#actionmenu button:hover {
+    background: linear-gradient( to bottom, rgba(73, 232, 56, 0.4), rgba(73, 232, 56, 0.4) );
+}
+
+#actionmenu button:active {
+    background: linear-gradient( to bottom, rgba(73, 232, 56, 0.4), rgba(73, 232, 56, 0.4) );
+}
