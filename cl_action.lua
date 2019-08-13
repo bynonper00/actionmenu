@@ -822,7 +822,7 @@ RegisterNUICallback( "ButtonClick", function( data, cb )
 	
 	elseif ( data == "testbutonu1" ) then
 	
-	
+		ClearPedTasks(PlayerPedId())
 	
 	
 	elseif ( data == "exit" ) then 
